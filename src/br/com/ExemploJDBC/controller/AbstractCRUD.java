@@ -10,7 +10,7 @@ public abstract class AbstractCRUD<T> {
 	private final String URL = "jdbc:mysql://localhost/CLASSES";
 	//jdbc:oracle:thin:@hostname:port Number:databaseName
 	private final String USER = "root";
-	private final String PASSWORD = "root";
+	private final String PASSWORD = "testebanco";
 	
 	protected Connection connection;
 

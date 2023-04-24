@@ -1,18 +1,18 @@
+
 package br.com.ExemploJDBC.model;
 
 public class Department {
 
 	/*
-	 * 	+-----------+-------------+------+-----+---------+----------------+
-		| Field     | Type        | Null | Key | Default | Extra          |
-		+-----------+-------------+------+-----+---------+----------------+
-		| dept_id   | int(11)     | NO   | PRI | NULL    | auto_increment |
-		| dept_name | varchar(50) | NO   |     | NULL    |                |
-		| building  | varchar(50) | NO   |     | NULL    |                |
-		| budget    | double      | NO   |     | NULL    |                |
-		+-----------+-------------+------+-----+---------+----------------+
-
-	 * */
+	 
+	CREATE TABLE DEPARTMENT(
+    ID_DEPARTMENT SERIAL PRIMARY KEY,
+    NAME_DEPARTMENT VARCHAR(50) NOT NULL,
+    BUILDING VARCHAR(50) NOT NULL,
+    BUDGET NUMERIC NOT NULL
+	);
+	 
+	 */
 	
 	private int idDepartment;
 	private String nameDepartment;
@@ -50,5 +50,5 @@ public class Department {
 	public void setBudgetDepartment(double budgetDepartment) {
 		this.budgetDepartment = budgetDepartment;
 	}
-	
+
 }

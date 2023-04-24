@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import br.com.ExemploJDBC.model.Department;
 
-public class CRUDDepartment<T> extends AbstractCRUD<T> {
+public class CRUDDepartment<T> extends AbstractCRUD<T> { 
 	
 	@Override
 	public boolean create(T o) throws SQLException {
@@ -28,7 +28,6 @@ public class CRUDDepartment<T> extends AbstractCRUD<T> {
 
 	@Override
 	public boolean delete(int id) throws SQLException {
-		// TODO Auto-generated method stub
 		String query = "DELETE FROM department WHERE dept_id = ?";
 		PreparedStatement stmt = super.connection.prepareStatement(query);
 		stmt.setInt(1, id);
@@ -84,5 +83,4 @@ public class CRUDDepartment<T> extends AbstractCRUD<T> {
 		}
 		return (ArrayList<T>) departments;
 	}
-
 }
